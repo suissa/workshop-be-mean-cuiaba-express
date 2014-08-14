@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  h1= title
+
+  form(method='POST', action='/api/beers')
+    .form-group
+      label(for='name') Name:
+      input(type='text', name='name')
+    .form-group
+      label(for='price') Price:
+      input(type='text', name='price')
+    .form-group
+      label(for='alcohol') Alcohol:
+      input(type='text', name='alcohol')
+    .form-group
+      label(for='category') Category:
+      input(type='text', name='category')
+    .form-group
+      label(for='description') Description:
+      textarea(name='description')
+    .form-group
+      input(type='submit', value='CADASTRAR')
+

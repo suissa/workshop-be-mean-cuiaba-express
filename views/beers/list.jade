@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1= title
+  p= beers
+
+  ul
+  for beer in beers
+    li 
+      a(href='/beers/#{beer._id}')
+        | #{beer.name} - #{beer.price} -  
+      a(href='/beers/#{beer._id}/update')
+        | ALTERAR -  
+      a(href='/beers/#{beer._id}/remove')
+        | DELETAR
